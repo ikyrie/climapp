@@ -1,4 +1,6 @@
+import 'package:climapp/ui/components/buttons.dart';
 import 'package:climapp/utils/colors.dart';
+import 'package:climapp/utils/theme.dart';
 import 'package:flutter/material.dart';
 
 class Splash extends StatelessWidget {
@@ -10,7 +12,10 @@ class Splash extends StatelessWidget {
       body: Ink(
         padding: const EdgeInsets.symmetric(horizontal: 32),
         decoration: const BoxDecoration(
-          gradient: LinearGradient(colors: gradiente, begin: Alignment.topCenter, end: Alignment.bottomCenter),
+          gradient: LinearGradient(
+              colors: gradiente,
+              begin: Alignment.topCenter,
+              end: Alignment.bottomCenter),
         ),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -25,30 +30,11 @@ class Splash extends StatelessWidget {
             ),
             const Padding(
               padding: EdgeInsets.only(bottom: 64),
-              child: Text("Boas-vindas!"),
+              child: Text("Boas-vindas!", style: extraLarge),
             ),
-            InkWell(
-              onTap: () {},
-              child: Ink(
-                padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-                decoration: const BoxDecoration(
-                  color: violetaDestaque,
-                  borderRadius: BorderRadius.all(Radius.circular(30)),
-                ),
-                child: const Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    Padding(
-                      padding: EdgeInsets.only(right: 8),
-                      child: Text("Entrar", style: TextStyle(color: azulVoid,),),
-                    ),
-                    Icon(Icons.arrow_forward, color: azulVoid,),
-                  ],
-                ),
-              ),
-            ),
+            const PrimaryButton(),
           ],
-                ),
+        ),
       ),
     );
   }

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-ThemeData theme = ThemeData(
+final ThemeData theme = ThemeData(
   useMaterial3: true,
   colorScheme: ColorScheme.fromSeed(
     seedColor: Colors.blueGrey,
@@ -10,4 +10,13 @@ ThemeData theme = ThemeData(
   textTheme: TextTheme(
     bodyMedium: GoogleFonts.montserrat(),
   ),
+);
+
+const TextStyle extraLarge = TextStyle(
+  fontSize: 25,
+);
+
+const TextStyle largeSemibold = TextStyle(
+  fontSize: 20,
+  fontWeight: FontWeight.w600,
 );
