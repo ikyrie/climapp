@@ -8,13 +8,15 @@ final ThemeData theme = ThemeData(
     brightness: Brightness.dark,
   ),
   textTheme: TextTheme(
-    bodyMedium: GoogleFonts.montserrat(),
+    bodyMedium: GoogleFonts.montserrat(fontSize: 16),
   ),
 );
 
 const TextStyle extraLarge = TextStyle(
   fontSize: 25,
 );
+
+final TextStyle extraLargeBold = extraLarge.copyWith(fontWeight: FontWeight.w700);
 
 const TextStyle largeSemibold = TextStyle(
   fontSize: 20,

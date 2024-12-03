@@ -1,4 +1,5 @@
 import 'package:climapp/utils/colors.dart';
+import 'package:climapp/utils/theme.dart';
 import 'package:flutter/material.dart';
 
 class WeatherCard extends StatelessWidget {
@@ -27,7 +28,7 @@ class WeatherCard extends StatelessWidget {
             children: <Widget>[
               const Icon(Icons.sunny),
               Text(cityName),
-              Text(temperature),
+              Text(temperature, style: extraLargeBold,),
             ],
           ),
         ),
