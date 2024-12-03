@@ -1,4 +1,5 @@
 import 'package:climapp/ui/components/buttons.dart';
+import 'package:climapp/ui/screens/home.dart';
 import 'package:climapp/utils/colors.dart';
 import 'package:climapp/utils/theme.dart';
 import 'package:flutter/material.dart';
@@ -32,7 +33,9 @@ class Splash extends StatelessWidget {
               padding: EdgeInsets.only(bottom: 64),
               child: Text("Boas-vindas!", style: extraLarge),
             ),
-            const PrimaryButton(),
+            PrimaryButton(onTap: (){
+              Navigator.push(context, MaterialPageRoute(builder: (context) => Home()));
+            },),
           ],
         ),
       ),
