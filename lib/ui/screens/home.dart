@@ -22,7 +22,12 @@ class Home extends StatelessWidget {
         child: Column(
           children: <Widget>[
             CustomSearchField(controller: cityTextController),
-            WeatherCard(cityName: "Floripas", temperature: "25°", onTap: (){},),
+            const SizedBox(height: 32,),
+            WeatherCard(cityName: "Florianópolis - SC", temperature: "25°", onTap: (){},),
+            WeatherCard(cityName: "Curitiba - PR", temperature: "21°", onTap: (){},),
+            WeatherCard(cityName: "São Paulo - SP", temperature: "32°", onTap: (){},),
+            WeatherCard(cityName: "Porto Alegre - RS", temperature: "19°", onTap: (){},),
+            WeatherCard(cityName: "Toledo - PR", temperature: "26°", onTap: (){},),
           ],
         ),
       ),
