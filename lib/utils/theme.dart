@@ -12,13 +12,12 @@ final ThemeData theme = ThemeData(
   ),
 );
 
-const TextStyle extraLarge = TextStyle(
-  fontSize: 25,
-);
+const TextStyle extraLarge = TextStyle(fontSize: 25);
 
 final TextStyle extraLargeBold = extraLarge.copyWith(fontWeight: FontWeight.w700);
 
-const TextStyle largeSemibold = TextStyle(
-  fontSize: 20,
-  fontWeight: FontWeight.w600,
-);
+const TextStyle large = TextStyle(fontSize: 20);
+
+final TextStyle largeSemibold = large.copyWith(fontWeight: FontWeight.w600);
+
+const TextStyle mediumSemibold = TextStyle(fontWeight: FontWeight.w600);

@@ -1,5 +1,6 @@
 import 'package:climapp/ui/components/custom_field.dart';
 import 'package:climapp/ui/components/weather_card.dart';
+import 'package:climapp/ui/screens/details.dart';
 import 'package:climapp/utils/colors.dart';
 import 'package:flutter/material.dart';
 
@@ -23,7 +24,7 @@ class Home extends StatelessWidget {
           children: <Widget>[
             CustomSearchField(controller: cityTextController),
             const SizedBox(height: 32,),
-            WeatherCard(cityName: "Florianópolis - SC", temperature: "25°", onTap: (){},),
+            WeatherCard(cityName: "Florianópolis - SC", temperature: "25°", onTap: (){Navigator.push(context, MaterialPageRoute(builder: (context) => WeatherDetails(cityName: "Florianópolis - SC")));},),
             WeatherCard(cityName: "Curitiba - PR", temperature: "21°", onTap: (){},),
             WeatherCard(cityName: "São Paulo - SP", temperature: "32°", onTap: (){},),
             WeatherCard(cityName: "Porto Alegre - RS", temperature: "19°", onTap: (){},),
