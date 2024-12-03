@@ -3,12 +3,14 @@ import 'package:climapp/utils/theme.dart';
 import 'package:flutter/material.dart';
 
 class PrimaryButton extends StatelessWidget {
-  const PrimaryButton({super.key});
+  const PrimaryButton({super.key, required this.onTap});
+
+  final Function onTap;
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () {},
+      onTap: () {onTap();},
       borderRadius: const BorderRadius.all(Radius.circular(30)),
       child: Ink(
         padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
