@@ -14,6 +14,7 @@ class WeatherCard extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 8),
       child: InkWell(
+        borderRadius: const BorderRadius.all(Radius.circular(15)),
         onTap: () { onTap(); },
         child: Ink(
           padding: const EdgeInsets.all(16),
