@@ -23,9 +23,18 @@ class WeatherDetails extends StatelessWidget {
               begin: Alignment.topCenter,
               end: Alignment.bottomCenter),
         ),
-        child: Column(
+        child: const Column(
           children: <Widget>[
             DetailedWeatherCard(),
+            SizedBox(height: 40,),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: <Widget>[
+                VerticalWeatherCard(weekDay: "Segunda", temperature: "25°", date: "03/12"),
+                VerticalWeatherCard(weekDay: "Segunda", temperature: "25°", date: "03/12"),
+                VerticalWeatherCard(weekDay: "Segunda", temperature: "25°", date: "03/12"),
+              ],
+            )
           ],
         ),
       ),
