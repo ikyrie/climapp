@@ -28,7 +28,7 @@ class Home extends StatelessWidget {
         child: CustomScrollView(
           slivers: <Widget>[
             SliverToBoxAdapter(
-              child: CustomSearchField(controller: cityTextController),
+              child: CustomSearchField(controller: cityTextController, onEditingComplete: () {weatherStore.fetchWeatherByCity(cityTextController.text);}),
             ),
             const SliverToBoxAdapter(child: SizedBox(height: 32,),),
           Observer(
