@@ -37,7 +37,9 @@ class Home extends StatelessWidget {
                 delegate: SliverChildBuilderDelegate(
                   (context, index) {
                     final weather = weatherStore.weatherList[index];
-                    return WeatherCard(weather: weather, onTap: (){},);
+                    return WeatherCard(weather: weather, onTap: (){
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => WeatherDetails(weather: weather,),));
+                    },);
                   },
                   childCount: weatherStore.weatherList.length,
                 ),
