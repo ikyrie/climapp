@@ -1,13 +1,16 @@
+import 'package:climapp/app/store/weather_store.dart';
 import 'package:climapp/ui/components/custom_field.dart';
 import 'package:climapp/ui/components/weather_card.dart';
 import 'package:climapp/ui/screens/details.dart';
 import 'package:climapp/utils/colors.dart';
 import 'package:flutter/material.dart';
+import 'package:get_it/get_it.dart';
 
 class Home extends StatelessWidget {
   Home({super.key});
 
   final TextEditingController cityTextController = TextEditingController();
+  final WeatherStore weatherStore = GetIt.instance.get<WeatherStore>();
 
   @override
   Widget build(BuildContext context) {
