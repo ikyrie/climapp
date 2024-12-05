@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'package:climapp/app/adapters/http_adapter.dart';
 import 'package:climapp/app/consts/enums.dart';
 import 'package:climapp/app/models/weather_model.dart';
 // flutter run --dart-define=MY_VAR=chave
