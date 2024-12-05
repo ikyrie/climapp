@@ -51,6 +51,7 @@ class VerticalWeatherCard extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 8),
       child: Container(
+        width: 100,
         padding: const EdgeInsets.all(16),
         decoration: const BoxDecoration(
           color: fillTransparente,
@@ -68,7 +69,7 @@ class VerticalWeatherCard extends StatelessWidget {
               padding: EdgeInsets.symmetric(vertical: 16),
               child: Icon(Icons.sunny),
             ),
-            Text(temperature, style: largeSemibold,),
+            Text("$temperature˚", style: largeSemibold,),
           ],
         ),
       ),
