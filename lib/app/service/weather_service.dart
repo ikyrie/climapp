@@ -21,20 +21,4 @@ class WeatherService {
       throw Exception('Erro na comunicação com a API: $e');
     }
   }
-
-  Future<Map<String, dynamic>> getWeatherByLocation(double lat, double lon) async {
-    try {
-      final response = await http.get(
-        Uri.parse('$_baseUrl?key=$_apiKey&lat=$lat&lon=$lon'),
-      );
-
-      if (response.statusCode == 200) {
-        return jsonDecode(response.body);
-      } else {
-        throw Exception('Falha ao carregar dados do clima');
-      }
-    } catch (e) {
-      throw Exception('Erro na comunicação com a API: $e');
-    }
-  }
 }
