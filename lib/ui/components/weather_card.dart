@@ -1,7 +1,9 @@
+import 'package:climapp/app/consts/enums.dart';
 import 'package:climapp/app/models/weather_model.dart';
 import 'package:climapp/utils/colors.dart';
 import 'package:climapp/utils/theme.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class WeatherCard extends StatelessWidget {
   const WeatherCard({super.key, required this.weather, required this.onTap});
@@ -27,9 +29,9 @@ class WeatherCard extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
-              const Icon(Icons.sunny),
+              SvgPicture.network("$imageUrl${weather.conditionSlug}.svg", width: 32,),
               Text(weather.city),
-              Text(weather.temp.toString(), style: extraLargeBold,),
+              Text("${weather.temp}˚", style: extraLargeBold,),
             ],
           ),
         ),
@@ -40,11 +42,12 @@ class WeatherCard extends StatelessWidget {
 
 
 class VerticalWeatherCard extends StatelessWidget {
-  const VerticalWeatherCard({super.key, required this.weekDay, required this.temperature, required this.date});
+  const VerticalWeatherCard({super.key, required this.weekDay, required this.temperature, required this.date, required this.imageUrl});
 
   final String weekDay;
   final String date;
   final String temperature;
+  final String imageUrl;
 
   @override
   Widget build(BuildContext context) {
@@ -65,9 +68,9 @@ class VerticalWeatherCard extends StatelessWidget {
             Text(weekDay),
             const SizedBox(height: 4,),
             Text(date),
-            const Padding(
-              padding: EdgeInsets.symmetric(vertical: 16),
-              child: Icon(Icons.sunny),
+            Padding(
+              padding: const EdgeInsets.symmetric(vertical: 16),
+              child: Image.network("$moonPhaseUrl$imageUrl.png"),
             ),
             Text("$temperature˚", style: largeSemibold,),
           ],
@@ -94,7 +97,7 @@ class DetailedWeatherCard extends StatelessWidget {
         children: <Widget>[
           Text("Hoje ${weather.date}", style: mediumSemibold,),
           const SizedBox(height: 24,),
-          const Icon(Icons.sunny, size: 64,),
+          SvgPicture.network("$imageUrl${weather.conditionSlug}.svg"),
           Text("${weather.temp}°", style: extraLargeBold.copyWith(fontSize: 42),),
           Text(weather.description),
           const SizedBox(height: 24,),

@@ -31,9 +31,9 @@ class WeatherDetails extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
-                VerticalWeatherCard(weekDay: weather.forecast[1].weekday, temperature: weather.forecast[1].max.toString(), date: weather.forecast[1].date),
-                VerticalWeatherCard(weekDay: weather.forecast[2].weekday, temperature: weather.forecast[2].max.toString(), date: weather.forecast[2].date),
-                VerticalWeatherCard(weekDay: weather.forecast[3].weekday, temperature: weather.forecast[3].max.toString(), date: weather.forecast[3].date),
+                VerticalWeatherCard(weekDay: weather.forecast[1].weekday, temperature: weather.forecast[1].max.toString(), date: weather.forecast[1].date, imageUrl: weather.forecast[1].moonPhase),
+                VerticalWeatherCard(weekDay: weather.forecast[2].weekday, temperature: weather.forecast[2].max.toString(), date: weather.forecast[2].date, imageUrl: weather.forecast[2].moonPhase),
+                VerticalWeatherCard(weekDay: weather.forecast[3].weekday, temperature: weather.forecast[3].max.toString(), date: weather.forecast[3].date, imageUrl: weather.forecast[3].moonPhase),
               ],
             )
           ],
